@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Caculator" default="build">
+	<description>Builds Project Calculator</description>
+	<property name="srcDir" location="src"/>
+	<property name="buildDir" location="build"/>
+
+	<target name="init">
+		<mkdir dir="${buildDir}"/>
+	</target>
+
+	<target name="build" depends="init">
+		<javac srcdir="${srcDir}" destdir="${buildDir}"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${buildDir}"/>
+	</target>
+</project>
