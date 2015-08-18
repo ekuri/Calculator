@@ -9,5 +9,5 @@
 # Run
 
 1. Go to "build" directory.
-2. Run "java Calculate".
+2. Run "java Calculator".
 3. Enjoy.
