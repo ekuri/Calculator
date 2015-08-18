@@ -158,6 +158,10 @@ class CalculatorGUI extends JFrame {
                     result = leftOperand * rightOperand;
                     break;
                 case "/":
+                    if (rightOperand == 0) {
+                    	JOptionPane.showMessageDialog(null, "Can not divide zero!", "Error", JOptionPane.ERROR_MESSAGE);
+                    	return;
+                    }
                     result = leftOperand / rightOperand;
                     break;
                 default:
