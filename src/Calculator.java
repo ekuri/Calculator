@@ -133,20 +133,20 @@ class CalculatorGUI extends JFrame {
         }
         @Override
         public void actionPerformed(ActionEvent e) {
-            int leftOperand = 0;
-            int rightOperand = 0;
+            double leftOperand = 0;
+            double rightOperand = 0;
             
             // error may be occur when convert string to number
             try {
-                leftOperand = Integer.parseInt(this.targetGUI.getLeftOperandTextField().getText());
-                rightOperand = Integer.parseInt(this.targetGUI.getRightOperandTextField().getText());
+                leftOperand = Double.parseDouble(this.targetGUI.getLeftOperandTextField().getText());
+                rightOperand = Double.parseDouble(this.targetGUI.getRightOperandTextField().getText());
             } catch(java.lang.NumberFormatException err) {
                 JOptionPane.showMessageDialog(null, "Operand format incorrect!", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             
             // calculate the output according to operand
-            int result = 0;
+            double result = 0;
             switch(this.targetGUI.getOperandLabel().getText()) {
                 case "+":
                     result = leftOperand + rightOperand;
